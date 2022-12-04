@@ -1,0 +1,42 @@
+<html>
+
+    <head>
+        <script>
+            function basic(callback) {
+                document.write('Basic Function')
+                document.write("<br>");
+                callback()
+            }
+
+            function callbk() {
+                document.write('Call back function')
+            }
+
+            function redirect() {
+                window.location = 'https://www.javatpoint.com/'
+            }
+
+            function sleep(millisec) {
+                return new Promise((resolve) => {
+                    setTimeout(resolve, millisec)
+                });
+            }
+
+            async function fun() {
+                document.write('Hello World');  
+                for (let i = 1; i <=10 ; i++) {          
+                    await sleep(2000);  
+                    document.write( i + " " + "Welcome to the javaTpoint.com" + " " + "</br>");  
+                }  
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <button onclick="basic(callbk)">Callback</button>
+        <button onclick="redirect()">Redirect</button>
+        <button onclick="fun()">Sleep</button>
+    </body>
+
+</html>
