@@ -11,10 +11,26 @@ class Employee {
         document.write(this.id + ' ' + this.name);
     }
 
+    static display() {
+        document.write("<br>");
+        document.write("Static function called");
+    }
+
+}
+
+// Prototype
+Employee.prototype.fullName = function() {
+    return this.id + ' ' + this.name;
 }
 
 var emp1 = new Employee(1, 'Sonali');
 emp1.details();
+document.write("<br>");
+
+var emp2=new Employee("Duke", "William");  
+document.write(emp2.fullName())
+
+Employee.display();
 
 // JS Object
 
