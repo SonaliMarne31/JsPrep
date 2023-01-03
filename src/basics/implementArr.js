@@ -1,9 +1,7 @@
 // implement Array.flat(depth)
-
 let array = [1, [2], [3, [4]]];
-let arrToReduce = [1,2,3,4, 'Hi'];
-console.log(array);
 
+let array1 = [1, 2, 3, [4, 5, [6, [7]], 8], [10, [11, [12, 13]]], 9];
 function flat(arr, depth = 1) {
     let res = [];
 
@@ -21,10 +19,15 @@ function flat(arr, depth = 1) {
 
 let flatArr = flat(array, 1);
 console.log('flattened array ' + flatArr);
+console.log('arr 1 ', flat(array1, 1));
+console.log('arr 2 ', flat(array1, 2));
+console.log('arr 3 ', flat(array1, 3));
+console.log('arr 4 ', flat(array1, 4));
+console.log('arr 5 ', flat(array1, 5));
 
 
 // Implement Array.reduce 
-
+let arrToReduce = [1,2,3,4, 'Hi'];
 function reduce(arr, sum = 0) {
     let res = sum;
 
